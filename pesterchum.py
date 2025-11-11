@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
-import os
-import sys
 import argparse
-import traceback
-import logging
+import ctypes
 import datetime
+import json
+import logging
+import os
 import random
 import re
+import sys
 import time
-import json
-import ctypes
+import traceback
+
+from pnc.dep.attrdict import AttrDict
 
 # Set working directory
 if os.path.dirname(sys.argv[0]):
@@ -19,6 +21,10 @@ import ostools
 import pytwmn
 from update import UpdateChecker
 
+# AG NOTE :
+#       EXPERIMENTAL CONSOLE REIMPLEMENT8ION! This WILL 8r8k shit!
+
+#from profile import userConfig, userProfile, pesterTheme, PesterLog, PesterProfileDB
 from user_profile import (
     userConfig,
     userProfile,
@@ -35,7 +41,6 @@ from menus import (
     PesterMemoList,
     LoadingScreen,
     AboutPesterchum,
-    UpdatePesterchum,
     AddChumDialog,
 )
 from mood import Mood, PesterMoodAction, PesterMoodHandler, PesterMoodButton
@@ -60,9 +65,9 @@ from parsetools import (
 from memos import PesterMemo, MemoTabWindow, TimeTracker
 from irc import PesterIRC
 from logviewer import PesterLogUserSelect, PesterLogViewer
-from randomer import RandomHandler, RANDNICK
+from randomer import RandomHandler
 from toast import PesterToastMachine, PesterToast
-from scripts.services import SERVICES, CUSTOMBOTS, BOTNAMES, translate_nickserv_msg
+from scripts.services import SERVICES, BOTNAMES, translate_nickserv_msg
 import embeds
 
 try:
@@ -136,6 +141,17 @@ stream_handler.setFormatter(formatter)
 PchumLog.addHandler(file_handler)
 PchumLog.addHandler(stream_handler)
 
+
+#   EVERYTHING FOR A REASON
+#   EVERYTHING FOR A REASON
+#   Glo8al Varia8les, re-added from code found on lns.
+#   142-162 in pesterchum.py(2.5.3)
+
+_CONSOLE = True
+_CONSOLE_ENV = AttrDict(dict)
+_CONSOLE_ENV.PAPP = None
+#   Python 3
+QString = str
 # Command line arguments
 _ARGUMENTS = parser.parse_args()
 

@@ -10,7 +10,7 @@ class AttrDict(dict):
     overwritten.
     Overload _is_reserved if you want to change this."""
 
-    def __init__(self, init={}):
+    def __init__(self, init={}) -> None:
         super(AttrDict, self).__init__(init)
 
     def __getstate__(self):

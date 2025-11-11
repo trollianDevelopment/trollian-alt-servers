@@ -33,9 +33,20 @@
 #   disappeared. Time to see if this test 8uild works or
 #   not.
 #
-#       ==> 21:57 cst :
+#       ==> 21:57 CST :
 #           Well that did fucking nothing. Looking into
 #   this.
+#
+#       ==> 13:16 CST :
+#           Okay. Tracking these issues on GitHu8 is
+#   helping me a LITTLE 8it with figuring all of this out.
+#   Now I just need to add a ton of old code 8ack into
+#   pesterchum.py and pray nothing 8r8ks too 8adly. What's
+#   the worst that could happen? ::::)
+#       Side note: see if you can get in touch with Karxi
+#   to try to figure out whether or not the line:1422/2071
+#   comments are a shitpost or something serious. This code
+#   gets spookier the longer I stare into it.
 #
 # vim: set autoindent ts=4 sts=4 sw=4 textwidth=79 expandtab:
 # -*- coding=UTF-8; tab-width: 4 -*-
