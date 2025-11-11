@@ -3485,7 +3485,7 @@ class PesterWindow(MovingWindow):
     def launchHelp(self):
         QtGui.QDesktopServices.openUrl(
             QtCore.QUrl(
-                "https://github.com/Dpeta/pesterchum-alt-servers/issues",
+                "https://github.com/trollianDevelopment/trollian-alt-servers/issues",
                 QtCore.QUrl.ParsingMode.TolerantMode,
             )
         )
@@ -3500,7 +3500,7 @@ class PesterWindow(MovingWindow):
     def reportBug(self):
         QtGui.QDesktopServices.openUrl(
             QtCore.QUrl(
-                "https://github.com/Dpeta/pesterchum-alt-servers/issues",
+                "https://github.com/trollianDevelopment/trollian-alt-servers/issues",
                 QtCore.QUrl.ParsingMode.TolerantMode,
             )
         )
