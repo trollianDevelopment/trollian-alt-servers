@@ -118,10 +118,10 @@ class PesterLog:
             errmsg = QtWidgets.QMessageBox()
             errmsg.setIcon(QtWidgets.QMessageBox.Icon.Warning)
             errmsg.setText(
-                "Warning: Pesterchum could not open the log file for %s!" % (handle)
+                "Warning: Trollian could not open the log file for %s!" % (handle)
             )
             errmsg.setInformativeText(
-                "Your log for %s will not be saved because something went wrong. We suggest restarting Pesterchum. Sorry :("
+                "Your log for %s will not be saved because something went wrong. We suggest restarting Trollian. Sorry :("
                 % (handle)
                 + "\n"
                 + str(e)

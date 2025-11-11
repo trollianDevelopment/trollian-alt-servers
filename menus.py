@@ -1412,7 +1412,7 @@ class PesterOptions(QtWidgets.QDialog):
         if self.config.irc_compatibility_mode():
             self.irc_mode_check.setChecked(True)
         bandwidthLabel = QtWidgets.QLabel(
-            "Enable this if you're planning on using Pesterchum on a server with normal IRC clients."
+            "Enable this if you're planning on using Trollian on a server with normal IRC clients."
             "\nStops the client from sending or requesting:"
             "\n - Non-metadata moods (MOOD >0, GETMOOD, etc.)"
             "\n - Non-metadata dm colors (COLOR >0,0,0)"
@@ -2388,7 +2388,7 @@ class AboutPesterchum(QtWidgets.QDialog):
         self.mainwindow = parent
         self.setStyleSheet(self.mainwindow.theme["main/defaultwindow/style"])
         self.setModal(False)
-        self.title = QtWidgets.QLabel("P3ST3RCHUM %s" % (_pcVersion))
+        self.title = QtWidgets.QLabel("TR0LL14N %s" % (_pcVersion))
         self.credits = QtWidgets.QLabel(
             "Programming by:"
             "\n  illuminatedwax (ghostDunk)"
@@ -2400,7 +2400,8 @@ class AboutPesterchum(QtWidgets.QDialog):
             "\n  Arcane (arcaneAgilmente)"
             "\n  karxi (Midna)"
             "\n  Shou/Dpeta 🐱"
-            "\n"
+            "\n  arachnidsGripe"
+            "\n "
             "\nArt by:"
             "\n  Grimlive (aquaMarinist)"
             "\n  Cerxi (binaryCabalist)"

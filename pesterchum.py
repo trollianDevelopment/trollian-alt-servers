@@ -2506,7 +2506,7 @@ class PesterWindow(MovingWindow):
             msgbox.setStyleSheet(
                 "QMessageBox{ %s }" % self.theme["main/defaultwindow/style"]
             )
-            msgbox.setText("This chumhandle has been registered; you may not use it.")
+            msgbox.setText("This trollhandle has been registered; you may not use it.")
             msgbox.setInformativeText(
                 "Your handle is now being changed to %s." % (changedto)
             )
@@ -2656,7 +2656,7 @@ class PesterWindow(MovingWindow):
                 # TODO MAYBE: Perhaps check PesterProfile.checkValid(handle)[0] & add a confirmation witha little "you may have missed a capital letter r u sure" if its invalid
                 if not (PesterProfile.checkLength(handle)):
                     errormsg = QtWidgets.QErrorMessage(self)
-                    errormsg.showMessage("THIS IS NOT A VALID CHUMTAG!")
+                    errormsg.showMessage("THIS IS NOT A VALID TROLLTAG!")
                     self.addchumdialog = None
                     return
                 if re.search(r"[^A-Za-z0-9_\s]", group) is not None:
@@ -3504,12 +3504,13 @@ class PesterWindow(MovingWindow):
                 QtCore.QUrl.ParsingMode.TolerantMode,
             )
         )
-
+#The code 8elow was changed from pointing to the pesterchum.xyz rules to a rickroll as a test.
+    # Change this 8efore shipping the Trollian client. -AG 11-10-2025
     @QtCore.pyqtSlot()
     def xyzRules(self):
         QtGui.QDesktopServices.openUrl(
             QtCore.QUrl(
-                "https://www.pesterchum.xyz/pesterchum-rules",
+                "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                 QtCore.QUrl.ParsingMode.TolerantMode,
             )
         )
@@ -3645,10 +3646,11 @@ class PesterWindow(MovingWindow):
 
         # Go back to original screen
         self.chooseServer()
-
+#   Added "testing.pester.ing" to the default serverlist. -AG 11/10/2025
     def resetServerlist(self):
         default_server_list = [
-            {"server": "irc.pesterchum.xyz", "port": "6697", "TLS": True}
+            {"server": "irc.pesterchum.xyz", "port": "6697", "TLS": True},
+            {"server": "testing.pester.ing", "port": "6667", "TLS": False},
         ]
         if os.path.isfile(_datadir + "serverlist.json"):
             PchumLog.error("Failed to load server list from serverlist.json.")
@@ -4101,13 +4103,14 @@ class MainProgram(QtCore.QObject):
         # self.app.setQuitOnLastWindowClosed(False)
 
         options = self.oppts(sys.argv[1:])
-
+#   AG NOTE: What the fuck does "a silly little guy" mean in this context? -11-10-2025
+        #Note 2: I might 8e a fucking idiot. I actually just hate gigglesnort in code.
         # Check if the user is a silly little guy
         for folder in ["smilies", "themes"]:
             if not os.path.isdir(folder):
                 msgbox = QtWidgets.QMessageBox()
                 msg = (
-                    "'%s' folder not found, Pesterchum will "
+                    "'%s' folder not found, Trollian will "
                     "probably not function correctly."
                     "\nIf this is an excecutable build, "
                     "verify you extracted the zipfile." % folder
